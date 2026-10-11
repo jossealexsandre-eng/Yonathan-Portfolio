@@ -919,7 +919,7 @@ export default function App() {
           {/* Tipografi Raksasa YONATHAN di Atas Tengah */}
           <div className="w-full text-center select-none relative z-10 px-2 reveal-on-scroll">
             <h1
-              className="font-giant text-[clamp(2.6rem,11.2vw,12.5rem)] text-[#111111] w-full block text-center leading-[0.85] tracking-[-0.04em] select-none"
+              className="font-giant text-[clamp(3rem,15vw,12.6rem)] text-[#111111] w-full block text-center leading-[0.85] tracking-[-0.04em] select-none"
               aria-label="Yonathan Piri"
             >
               YONATHAN
