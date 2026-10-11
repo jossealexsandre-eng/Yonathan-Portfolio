@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Archivo', sans-serif;
+  --font-editorial: 'Archivo', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --color-bg: #F7F7F4;
+  --color-text: #111111;
+  --color-muted: #555555;
+  --color-border: #D0D0CC;
+  --color-card: #FFFFFF;
+  --color-soft: #EFEFEA;
+}
+
+html {
+  background-color: #F7F7F4;
+  color: #111111;
+}
+
+body {
+  background-color: #F7F7F4;
+  color: #111111;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Editorial tactile paper grain texture */
+.bg-textured-paper {
+  background-color: #F7F7F4;
+  background-image: radial-gradient(rgba(17, 17, 17, 0.045) 0.5px, transparent 0.5px);
+  background-size: 18px 18px;
+}
+
+/* Editorial giant name typography: ultra-bold neo-grotesk */
+.font-giant {
+  font-family: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.045em;
+  line-height: 0.82;
+}
+
+.font-editorial-heading {
+  font-family: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.font-serif-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+}
+
+/* Hairline borders */
+.hairline-b {
+  border-bottom: 1px solid #D0D0CC;
+}
+.hairline-t {
+  border-top: 1px solid #D0D0CC;
+}
+.hairline-l {
+  border-left: 1px solid #D0D0CC;
+}
+.hairline-r {
+  border-right: 1px solid #D0D0CC;
+}
+.hairline {
+  border: 1px solid #D0D0CC;
+}
+
+/* Subtle image hover zoom */
+.img-editorial-zoom {
+  overflow: hidden;
+}
+.img-editorial-zoom img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
+}
+.img-editorial-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* Subtle professional editorial ambient shadow */
+.portrait-ambient-shadow {
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.12)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.07));
+}
+
+/* Signature editorial portrait shadow matching reference image (Image 2) */
+.portrait-reference-shadow {
+  filter: drop-shadow(-20px 14px 24px rgba(0, 0, 0, 0.45)) drop-shadow(-4px 8px 12px rgba(0, 0, 0, 0.28)) drop-shadow(0 16px 36px rgba(0, 0, 0, 0.18));
+}
+
+/* ── Scroll Reveal & Stagger Animation Utilities ── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Directional Entrance (Alternating Left & Right) */
+.reveal-left {
+  opacity: 0;
+  transform: translate3d(-36px, 0, 0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translate3d(36px, 0, 0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left.is-revealed,
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.975);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.divider-expand {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.divider-expand.is-revealed {
+  transform: scaleX(1);
+}
+
+/* Stagger Delays for Organic Sequencing */
+.stagger-1 { transition-delay: 80ms; }
+.stagger-2 { transition-delay: 160ms; }
+.stagger-3 { transition-delay: 240ms; }
+.stagger-4 { transition-delay: 320ms; }
+.stagger-5 { transition-delay: 400ms; }
+.stagger-6 { transition-delay: 480ms; }
+
+/* Responsive motion distances on mobile */
+@media (max-width: 767px) {
+  .reveal-left {
+    transform: translate3d(-18px, 0, 0);
+  }
+  .reveal-right {
+    transform: translate3d(18px, 0, 0);
+  }
+}
+
+/* Accessible motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-left,
+  .reveal-right,
+  .reveal-on-scroll,
+  .reveal-scale,
+  .divider-expand {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F7F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8B8B2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #111111;
+}
+
+/* Print Stylesheet for clean CV exporting */
+@media print {
+  header, footer, nav, button, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
+
