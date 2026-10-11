@@ -333,7 +333,7 @@ const ABOUT_SLIDES: Array<{
 const ORG_SLIDES = [
   {
     image: IMAGES.himamaCommittee,
-    category: 'HIMAMA COMMITTEE',
+    category: '',
     title: 'Pengurus Himpunan Mahasiswa Manajemen',
     context: 'Pengabdian Masyarakat HIMAMA',
     period: '2024 - 2025',
@@ -1787,9 +1787,7 @@ export default function App() {
                   </div>
 
                   <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
-                    <span className="px-2.5 py-1 bg-[#111111] text-white text-[9px] font-mono tracking-widest uppercase">
-                      ZOOM PHOTO
-                    </span>
+
                   </div>
                 </div>
 
