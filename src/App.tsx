@@ -955,7 +955,7 @@ export default function App() {
                 </button>
 
                 <p className="lg:hidden font-sans font-bold text-xs sm:text-sm tracking-[0.2em] uppercase text-[#111111] leading-relaxed text-center">
-                  "Ko ada pake pake kapa"
+                  "OPEN TO WORK"
                 </p>
               </div>
             </div>
@@ -1158,7 +1158,7 @@ export default function App() {
             {/* ── KANAN: Tagline (desktop) / Download CV (mobile) ── */}
             <div className="lg:col-span-3 z-30 flex flex-col justify-center items-center lg:items-end text-center lg:text-right order-3 reveal-on-scroll">
               <p className="hidden lg:block font-sans font-bold text-xs sm:text-sm lg:text-base tracking-[0.2em] uppercase text-[#111111] leading-relaxed max-w-[260px]">
-                "Ko ada pake pake kapa"
+                "OPEN TO WORK"
               </p>
 
               <button
