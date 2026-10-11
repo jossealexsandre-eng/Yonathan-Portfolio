@@ -914,7 +914,7 @@ export default function App() {
             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <section
           id="hero"
-          className="relative max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-12 pt-4 sm:pt-6 lg:pt-4 pb-4 sm:pb-6 lg:pb-16 hairline-b overflow-hidden"
+          className="relative max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-12 pt-4 sm:pt-6 lg:pt-4 pb-4 sm:pb-6 lg:pb-16 hairline-b overflow-hidden min-h-[calc(100svh-6rem)] lg:min-h-0 flex flex-col justify-center lg:block"
         >
           {/* Tipografi Raksasa YONATHAN di Atas Tengah */}
           <div className="w-full text-center select-none relative z-10 px-2 reveal-on-scroll">
