@@ -311,8 +311,8 @@ const ABOUT_SLIDES: Array<{
     },
     {
       image: IMAGES.minimalistStudio,
-      category: 'PERSONAL POTO',
-      title: 'PAS POTO',
+      category: 'PERSONAL FOTO',
+      title: 'PAS FOTO',
       context: 'Universitas Kristen Maranatha',
       period: '2023',
       caption: 'Pas Foto resmi Universitas Kristen Maranatha',
